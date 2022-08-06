@@ -5,5 +5,8 @@ Requirements:
 To run:
   1. Edit the file input.sh
     - quite self explanatory, if not talk to me
+  2. If molecule doesnt exist in db.csv or parameters are wrong, add the molecule to the db.
+  
   2. type "bash input.sh"
     - output would be Simul-hr-min-second
+
