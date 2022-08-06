@@ -1,0 +1,77 @@
+[ atomtypes ]
+; Following Olga's excell sheet and DL_Poly inputs double checked with her 05/09/2012
+; With MARTINI flexibility
+; 5p difference towards more hydrophilic and hydrophobic S-W
+; WATER  at 298
+; CHerdes London 16 Aug 2012
+; name  bond_type  mass      charge   ptype     C            A
+  OA    C          37.54284  0.000    A         2.54587e-02  6.75412e-08
+  EO    C          44.05210  0.000    A         3.85595e-02  3.43597e-07
+  CM    C          42.07905  0.000    A         6.57392e-02  4.24313e-05
+  W     H          18.01505  0.000    A         1.52649E-02  1.28981E-03
+
+[ nonbond_params ]
+; i     j        func     C             A
+  OA    EO       1        3.14339E-02   1.55007E-07
+  OA    CM       1        4.11194E-02   2.39270E-06
+  OA    W        1        1.76125E-02   2.48835E-05
+  EO    CM       1        5.01659E-02   4.69093E-06
+  EO    W        1        2.21228E-02   4.29351E-05
+  CM    W        1        2.82286E-02   2.40567E-04
+
+[ moleculetype ]
+; S233: C10EO4OH: 2(OA)3(EO)3(CM) Tetraethylene glycol monodecyl ether
+; CAS Number 5703-94-6 Molecular Weight 334.49 (Note: in simulation 333.48 due to the missing hydrogen in terminal CH4) 
+; Name	nrexcl									
+  S233	1
+											
+[ atoms ]									
+;	nr	type	resnr	residue	atom	cgnr
+	1	OA      1	S233	OA	1				
+	2	OA      1	S233	OA	1				
+	3	EO      1	S233	EO	2				
+	4	EO      1	S233	EO	2				
+	5	EO      1	S233	EO	2				
+	6	CM      1	S233	CM	3				
+	7	CM      1	S233	CM	3				
+	8	CM      1	S233	CM	3				
+
+[ bonds ]									
+;	ai	aj   funct   bo      kbo
+	1	2    1	     0.372   17000.0
+        2       3    1       0.391   17000.0
+        3       4    1       0.409   17000.0
+        4       5    1       0.409   17000.0
+        5       6    1       0.425    1250.0
+        6       7    1       0.442    1250.0
+        7       8    1       0.442    1250.0
+
+[ angles ]
+;      ai   aj    ak    funct     angle    Kangle
+       1    2     3     1         130.0    50.0   
+       2    3     4     1   	  130.0    50.0
+       3    4     5     1         130.0    50.0
+       4    5     6     2         120.0    25.0
+       5    6     7     2         180.0    25.0
+       6    7     8     2         180.0    25.0
+
+[dihedrals]
+; ai aj ak al funt    angle      c1    c2
+   1  2  3  4     1   180.00    1.96   1
+   1  2  3  4     1     0 	0.18   2  
+   1  2  3  4     1     0       0.33   3
+   1  2  3  4     1     0       0.12   4 
+   2  3  4  5     1   180.00    1.96   1    
+   2  3  4  5     1     0       0.18   2           
+   2  3  4  5     1     0       0.33   3 
+   2  3  4  5     1     0       0.12   4 
+
+[ moleculetype ]
+; H2O Water one CG site
+; Name  nrexcl
+  H2O   1
+
+[ atoms ]
+;	nr	type    resnr   residue atom    cgnr
+        1	W	1	H2O     W	1
+

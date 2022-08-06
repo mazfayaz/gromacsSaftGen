@@ -1,0 +1,12 @@
+[ defaults ]
+; nbfunc comb-rule gen-pairs fudgeLJ fudgeQQ
+  1      1         
+
+#include "nonionic_SCG_W_MARTINI_5pSW.itp"
+
+[ system ]
+Water Mie 8 6 density of surface tension cell
+
+[ molecules ]
+H2O     8000
+S233    96

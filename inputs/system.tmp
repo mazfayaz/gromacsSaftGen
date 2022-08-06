@@ -1,0 +1,10 @@
+[ defaults ]
+; nbfunc comb-rule gen-pairs fudgeLJ fudgeQQ
+  1      1         
+
+#include "archipelago.itp"
+
+[ system ]
+MAZCHAIN Pv at 617K
+
+[ molecules ]
